@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "麦麦省钱官 · 季度数据速览",
+    "author": "咕咕嘎嘎",
+    "layout": "quarterly-report",
+    "output": ["html-preview", "video-script"],
+    "avatar": "@麦麦分身",
+    "sensitive": false,
+    "privacy": "数据源为公开 GitHub API，不含个人信息，真实产物可直接分享"
+  },
+  "data_source": {
+    "type": "http",
+    "url": "https://api.github.com/repos/hanrixing/mcd-saving-expert",
+    "fields": {
+      "star": "stargazers_count",
+      "fork": "forks_count",
+      "open_issues": "open_issues_count"
+    },
+    "fallback": { "star": 1, "fork": 0, "open_issues": 1 }
+  },
+  "bindings": {
+    "star": "star",
+    "fork": "fork",
+    "open_issues": "open_issues"
+  },
+  "script": [
+    {
+      "shot": "开场",
+      "speak": "大家好，这是麦麦省钱官的季度数据速览。我们的开源仓库目前已经有 {star} 颗星标。",
+      "camera": "FPV 穿越机缓慢推进至数据看板，背景是流动的霓虹蓝光带",
+      "visual": "大号数字 {star} 从屏幕中央升起，金属高光描边"
+    },
+    {
+      "shot": "数据概览",
+      "speak": "截至本次生成，项目获得 {fork} 次复刻，挂着 {open_issues} 个公开议题。每一个议题都是一次真实反馈。",
+      "camera": "镜头横向平移掠过三块数据卡片，每块卡片轻微浮动",
+      "visual": "三块玻璃质感卡片并列：星标 {star} / 复刻 {fork} / 议题 {open_issues}，数字用暖橙色高亮"
+    },
+    {
+      "shot": "核心差异",
+      "speak": "和别的省钱助手不同，我们的价格、券、门店全部来自麦当劳官方实时接口，不是凭经验猜。数据变了，这段视频就自己重生成。",
+      "camera": "镜头急停转向一面发光的接口墙，数据流像雨一样落下",
+      "visual": "左侧「凭经验猜」字样碎裂，右侧「官方实时数据」字样用 Bloom 辉光放大"
+    },
+    {
+      "shot": "收尾",
+      "speak": "如果你也想让汇报视频自己更新，去 GitHub 点个星标支持我们。我是咕咕嘎嘎，我们下期见。",
+      "camera": "数字分身半身中景，轻微前倾，背景虚化成柔光",
+      "visual": "结尾定格在仓库地址水印，暖色光晕收束"
+    }
+  ]
+}
