@@ -18,6 +18,10 @@
   .card p { color: #7e8a99; font-size: 13px; margin: 0; line-height: 1.6; }
   .tag { display: inline-block; font-size: 11px; color: #46d3a0; border: 1px solid #2a4a3d;
          border-radius: 6px; padding: 1px 8px; margin-left: 8px; vertical-align: 2px; }
+  .video-block { margin-bottom: 24px; }
+  .video-block video { width: 100%; border-radius: 14px; border: 1px solid #25303d;
+                       display: block; background: #000; }
+  .video-cap { color: #7e8a99; font-size: 12px; margin-top: 8px; }
   .foot { color: #55616e; font-size: 12px; margin-top: 36px; line-height: 1.8; }
   a.plain { color: #46d3a0; text-decoration: none; }
 </style>
@@ -29,6 +33,11 @@
     这是 LiveDoc 生成的真实产物——每个页面里的数字都来自<strong>接口实时数据</strong>，
     重跑一次生成器，数字与讲稿会一起刷新。<br>
     本页为 demo 模式（脱敏示例数据），安全可公开。
+  </div>
+
+  <div class="video-block" id="video">
+    <video controls preload="metadata" poster="screenshots/video-cover.jpg" src="video/mcd-weekly-demo.mp4"></video>
+    <div class="video-cap">▶ 12 秒数字分身讲解视频（即梦 AI 生成，分身直接念台词）——「数据变了，重跑即更新」的完整演绎</div>
   </div>
 
   <a class="card" href="demo-mcd-weekly.html">

@@ -17,6 +17,10 @@ script shots     ─┘                + digital-avatar script (Jimeng storyboar
 
 🔗 **[Live demo (no install needed)](https://hanrixing.github.io/livedoc/)** · **[Roadmap](ROADMAP.md)**
 
+▶️ **12-second explainer video** — generated with Jimeng AI; the digital avatar narrates the script itself. Click the cover to play:
+
+[![Click to play · 12-second explainer video](docs/screenshots/video-cover.jpg)](docs/video/mcd-weekly-demo.mp4)
+
 ![Live update: change the data source -> re-run -> numbers and script refresh](docs/screenshots/demo-live-update.gif)
 
 ---

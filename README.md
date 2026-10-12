@@ -15,6 +15,10 @@ See [README_EN.md](README_EN.md) for installation and usage.
 
 🔗 **[在线演示（点开即看，无需安装）](https://hanrixing.github.io/livedoc/)** · **[提升路线图](ROADMAP.md)**
 
+▶️ **12 秒数字分身讲解视频** —— 即梦 AI 生成，分身直接念台词。点击封面播放：
+
+[![点击播放 · 12 秒数字分身讲解视频](docs/screenshots/video-cover.jpg)](docs/video/mcd-weekly-demo.mp4)
+
 ![活文档演示：修改数据源 → 重跑 → 数字与讲稿自动更新](docs/screenshots/demo-live-update.gif)
 
 把「死 PPT」变成「活视频」：输入**版式 + 数据声明 + 讲稿**，输出带**实时数据 + 数字分身讲解**的动态内容。
