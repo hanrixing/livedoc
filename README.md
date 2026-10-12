@@ -2,6 +2,17 @@
 
 **你的汇报视频，能不能自己更新？**
 
+<details open>
+<summary><b>🌐 English</b> (click to collapse / <a href="README_EN.md">full English README</a>)</summary>
+
+**Can your report video update itself?**
+
+LiveDoc turns a "dead PPT" into a "living video": feed in **layout + data declaration + script**, get dynamic content with **live data + digital-avatar narration**. Data changes → re-run → auto-updated. Native **MCP** data sources, zero third-party dependencies.
+
+See [README_EN.md](README_EN.md) for installation and usage.
+
+</details>
+
 把「死 PPT」变成「活视频」：输入**版式 + 数据声明 + 讲稿**，输出带**实时数据 + 数字分身讲解**的动态内容。
 数据变了，重跑一次，数字和讲稿自动刷新——这就是和「PPT 转视频」工具的本质区别。
 
