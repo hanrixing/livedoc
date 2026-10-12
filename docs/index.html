@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LiveDoc · 在线演示</title>
+<style>
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         margin: 0; background: #0c1118; color: #e8edf2; padding: 48px 24px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 26px; font-weight: 600; margin: 0 0 8px; }
+  .sub { color: #7e8a99; font-size: 14px; line-height: 1.7; margin-bottom: 32px; }
+  .card { display: block; background: #161d27; border: 1px solid #25303d; border-radius: 14px;
+          padding: 22px 26px; margin-bottom: 16px; text-decoration: none; color: inherit;
+          transition: border-color .15s; }
+  .card:hover { border-color: #46d3a0; }
+  .card h2 { font-size: 17px; margin: 0 0 6px; font-weight: 600; }
+  .card p { color: #7e8a99; font-size: 13px; margin: 0; line-height: 1.6; }
+  .tag { display: inline-block; font-size: 11px; color: #46d3a0; border: 1px solid #2a4a3d;
+         border-radius: 6px; padding: 1px 8px; margin-left: 8px; vertical-align: 2px; }
+  .foot { color: #55616e; font-size: 12px; margin-top: 36px; line-height: 1.8; }
+  a.plain { color: #46d3a0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>LiveDoc · 活文档在线演示</h1>
+  <div class="sub">
+    这是 LiveDoc 生成的真实产物——每个页面里的数字都来自<strong>接口实时数据</strong>，
+    重跑一次生成器，数字与讲稿会一起刷新。<br>
+    本页为 demo 模式（脱敏示例数据），安全可公开。
+  </div>
+
+  <a class="card" href="demo-mcd-weekly.html">
+    <h2>麦麦省钱周报 <span class="tag">MCP 数据源</span></h2>
+    <p>数据来自麦当劳官方 MCP：卡包券、可领券、今日活动 + 自动计算券的到期倒数。演示了敏感数据的隔离机制。</p>
+  </a>
+
+  <a class="card" href="demo-quarterly-report.html">
+    <h2>季度数据速览 <span class="tag">HTTP 数据源</span></h2>
+    <p>数据来自 GitHub API：仓库 Star / Fork / Issue 实时入稿。公开数据源，可直接分享。</p>
+  </a>
+
+  <div class="foot">
+    LiveDoc · 声明式数据源 + 数字分身讲稿，数据变 → 重跑 → 自动更新。<br>
+    源码与文档：<a class="plain" href="https://github.com/hanrixing/livedoc">github.com/hanrixing/livedoc</a>
+  </div>
+</div>
+</body>
+</html>

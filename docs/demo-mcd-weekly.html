@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>麦麦省钱周报 · LiveDoc 预览</title>
+<style>
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         margin:0; background:#0c1118; color:#e8edf2; padding:32px; }
+  h1 { font-size:22px; font-weight:600; margin:0 0 4px; }
+  .sub { color:#7e8a99; font-size:13px; margin-bottom:20px; }
+  .warn { background:#3a2418; border:1px solid #7a4a2a; color:#ffb27a;
+           padding:10px 14px; border-radius:10px; font-size:13px; margin-bottom:20px; }
+  .cards { display:flex; flex-wrap:wrap; gap:14px; margin-bottom:24px; }
+  .card { background:#161d27; border:1px solid #25303d; border-radius:14px;
+          padding:18px 26px; min-width:110px; }
+  .num { font-size:30px; font-weight:600; color:#46d3a0; font-variant-numeric:tabular-nums;
+          word-break:break-all; }
+  .label { font-size:12px; color:#7e8a99; margin-top:6px; }
+  .doc { background:#121922; border:1px solid #25303d; border-radius:14px;
+          padding:20px 26px; margin-bottom:18px; }
+  .doc h2 { font-size:15px; color:#9fb0c0; margin:0 0 12px; font-weight:600; }
+  ol { margin:0; padding-left:18px; }
+  li { margin-bottom:16px; line-height:1.6; }
+  .speak { color:#e8edf2; margin:4px 0; }
+  .meta { color:#7e8a99; font-size:12px; margin:2px 0; }
+  .src { color:#7e8a99; font-size:12px; line-height:1.8; }
+  .live { color:#46d3a0; font-size:12px; margin-top:14px; }
+</style></head>
+<body>
+<h1>麦麦省钱周报</h1>
+<div class="sub">LiveDoc 活文档 · 数字分身：@麦麦省钱官分身 · 生成于 2026-10-11 23:43:14</div>
+
+<div class="cards"><div class="card"><div class="num">3</div><div class="label">coupon_count</div></div>
+<div class="card"><div class="num">示例：9.9 元饮品券</div><div class="label">coupon_first</div></div>
+<div class="card"><div class="num">2026-10-15 00:00-2026-10-20 23:59</div><div class="label">coupon_expiry</div></div>
+<div class="card"><div class="num">6</div><div class="label">claimable_count</div></div>
+<div class="card"><div class="num">示例：超值 9.9 元早餐两件套</div><div class="label">today_campaign</div></div>
+<div class="card"><div class="num">9</div><div class="label">expiry_days</div></div>
+<div class="card"><div class="num">2026-10-20</div><div class="label">expiry_date</div></div></div>
+<div class="doc"><h2>数字分身讲稿（4 镜）</h2>
+<ol><li><b>第1镜 · 开场 · 本周可领</b><p class="speak">你好，我是你的麦麦省钱官。本周麦麦省一共放出 6 张可领券，我都帮你列好了，一键就能领。</p><p class="meta">镜头：中景平视，数字分身在麦当劳柜台前自然走动，轻微推近<br>视觉：背景虚化的麦当劳门店暖光，分身右手轻点空中浮现 6 张券卡片</p></li>
+<li><b>第2镜 · 卡包盘点</b><p class="speak">再看你自己的卡包，现在有 3 张券可用，第一张是示例：9.9 元饮品券。</p><p class="meta">镜头：近景，分身低头看手机，镜头缓推到肩部以上<br>视觉：手机屏幕浮起卡包界面，3 张券依次滑过，暖黄券面高光</p></li>
+<li><b>第3镜 · 到期预警（核心差异）</b><p class="speak">重点提醒：示例：9.9 元饮品券这张券 2026-10-20 到期，只剩 9 天了，别浪费。</p><p class="meta">镜头：特写急推，分身抬手做出提醒手势，画面轻微震动<br>视觉：券面上浮现红色倒计时「9 天」，数字跳动伴随红色警示辉光</p></li>
+<li><b>第4镜 · 今日活动与行动</b><p class="speak">今天门店在推的是：示例：超值 9.9 元早餐两件套。领券加上活动，这周能省下一顿早餐钱。</p><p class="meta">镜头：中景横移跟拍，分身走向取餐台，收尾定格<br>视觉：今日活动海报从右侧滑入，分身微笑指向海报，暖色调收尾</p></li></ol>
+<div class="live">数据变了？重跑 <code>generator.py</code>，卡片与讲稿同步刷新——这就是「活文档」。</div>
+</div>
+<div class="doc"><h2>数据来源</h2>
+<ul class="src"><li>demo（脱敏示例）· my_coupons</li>
+<li>demo（脱敏示例）· available_coupons</li>
+<li>demo（脱敏示例）· campaign</li></ul>
+</div>
+</body></html>
