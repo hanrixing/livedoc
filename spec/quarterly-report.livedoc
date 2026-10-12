@@ -8,6 +8,11 @@
     "sensitive": false,
     "privacy": "数据源为公开 GitHub API，不含个人信息，真实产物可直接分享"
   },
+  "labels": {
+    "star": "Star 星标",
+    "fork": "复刻数",
+    "open_issues": "公开议题"
+  },
   "data_source": {
     "type": "http",
     "url": "https://api.github.com/repos/hanrixing/mcd-saving-expert",

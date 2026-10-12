@@ -7,6 +7,16 @@
     "sensitive": true
   },
 
+  "labels": {
+    "coupon_count": "卡包券数",
+    "coupon_first": "最近一张券",
+    "coupon_expiry": "有效期",
+    "claimable_count": "本周可领券",
+    "today_campaign": "今日活动",
+    "expiry_days": "剩余天数",
+    "expiry_date": "到期日"
+  },
+
   "data_sources": [
     {
       "id": "my_coupons",

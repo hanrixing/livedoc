@@ -3,6 +3,7 @@ output/live/
 
 # 临时文件与缓存
 .tmp/
+.tmp-edge/
 __pycache__/
 *.pyc
 

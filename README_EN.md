@@ -15,6 +15,10 @@ script shots     ─┘                + digital-avatar script (Jimeng storyboar
 
 🇨🇳 **中文说明请见 [README.md](README.md)**
 
+🔗 **[Live demo (no install needed)](https://hanrixing.github.io/livedoc/)** · **[Roadmap](ROADMAP.md)**
+
+![McdSaving Weekly · living document preview](docs/screenshots/demo-mcd-weekly.png)
+
 ---
 
 ## Why this is not another "PPT-to-video"

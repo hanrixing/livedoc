@@ -215,6 +215,7 @@ def bind(text: str, data: dict) -> str:
 def render_html(spec: dict, data: dict, sources: list, ts: str, live: bool,
                 sensitive: bool = True) -> str:
     meta = spec.get("meta", {})
+    labels = spec.get("labels", {}) or {}   # 字段中文标签映射（可选；缺省用字段名）
     title = html.escape(meta.get("title", "LiveDoc"))
     avatar = html.escape(meta.get("avatar", ""))
 
@@ -225,7 +226,7 @@ def render_html(spec: dict, data: dict, sources: list, ts: str, live: bool,
 
     cards = "\n".join(
         f'<div class="card"><div class="num">{html.escape(str(v))}</div>'
-        f'<div class="label">{html.escape(k)}</div></div>'
+        f'<div class="label">{html.escape(labels.get(k, k))}</div></div>'
         for k, v in data.items()
     )
 
