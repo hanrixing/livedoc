@@ -1,0 +1,37 @@
+name: Smoke Test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run generator in demo mode (no token, no network required)
+        run: |
+          python src/generator.py spec/mcd-weekly.livedoc
+          python src/generator.py spec/quarterly-report.livedoc
+
+      - name: Assert outputs are generated
+        run: |
+          test -f output/mcd-weekly.html
+          test -f output/mcd-weekly.jimeng.md
+          test -f output/quarterly-report.html
+          test -f output/quarterly-report.jimeng.md
+          echo "All outputs generated OK"
+
+      - name: Assert no placeholder leftovers in rendered script
+        run: |
+          if grep -E '\{[a-z_]+\}' output/mcd-weekly.jimeng.md; then
+            echo "::error::Placeholder leftovers found in jimeng script"
+            exit 1
+          fi
+          echo "No placeholder leftovers"
