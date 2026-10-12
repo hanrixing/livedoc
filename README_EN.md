@@ -17,7 +17,7 @@ script shots     ─┘                + digital-avatar script (Jimeng storyboar
 
 🔗 **[Live demo (no install needed)](https://hanrixing.github.io/livedoc/)** · **[Roadmap](ROADMAP.md)**
 
-![McdSaving Weekly · living document preview](docs/screenshots/demo-mcd-weekly.png)
+![Live update: change the data source -> re-run -> numbers and script refresh](docs/screenshots/demo-live-update.gif)
 
 ---
 

@@ -15,7 +15,7 @@ See [README_EN.md](README_EN.md) for installation and usage.
 
 🔗 **[在线演示（点开即看，无需安装）](https://hanrixing.github.io/livedoc/)** · **[提升路线图](ROADMAP.md)**
 
-![麦麦省钱周报 · 活文档预览](docs/screenshots/demo-mcd-weekly.png)
+![活文档演示：修改数据源 → 重跑 → 数字与讲稿自动更新](docs/screenshots/demo-live-update.gif)
 
 把「死 PPT」变成「活视频」：输入**版式 + 数据声明 + 讲稿**，输出带**实时数据 + 数字分身讲解**的动态内容。
 数据变了，重跑一次，数字和讲稿自动刷新——这就是和「PPT 转视频」工具的本质区别。

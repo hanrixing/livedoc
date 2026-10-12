@@ -12,7 +12,7 @@
 
 - [x] **GitHub Pages 在线演示** —— 访客点开链接直接看活文档效果，不用装 Python（`docs/` 目录已就位）
 - [x] **README 加效果截图** —— 演示页截图已放顶部（`docs/screenshots/`），并为数据卡片加了中文标签映射
-- [ ] **30 秒演示 GIF** —— 跑一次生成器：数据变→数字刷新→讲稿更新，一镜到底
+- [x] **演示动图（GIF）** —— 「数据变化前后」双帧动图（`docs/screenshots/demo-live-update.gif`）：修改数据 → 重跑 → 数字与讲稿同步刷新，一图讲清「活文档」
 - [ ] **CHANGELOG + 版本 tag**（v0.2.0）—— 正规项目的门面
 - [ ] **GitHub Actions 冒烟测试** —— 每次 push 自动跑一次 demo 模式生成，保证仓库永远可运行
 
