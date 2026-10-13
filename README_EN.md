@@ -74,15 +74,17 @@ Tokens are read from the `MCD_MCP_TOKEN` env var or `~/.workbuddy/mcp.json`, and
 
 ---
 
-## Two Built-in Examples
+## Three Built-in Examples
 
 | Spec | Data source | What it demonstrates |
 |---|---|---|
 | `spec/quarterly-report.livedoc` | GitHub API (public) | Real Star/Fork/Issue numbers in the script; public data, safe to share |
 | `spec/mcd-weekly.livedoc` | **McDonald's official MCP** (`query-my-coupons` / `available-coupons` / `campaign-calendar`) | Real coupon data + **auto-computed expiry countdown**; demonstrates sensitive-data isolation |
+| `spec/daily-weather.livedoc` | open-meteo weather API (public, no key) | Temperature/humidity/rain probability in real time; weather codes translated via a **declarative mapping table** — proves the pipeline works beyond MCP |
 
 Verified live: all three MCP tools returned real data, and the script auto-filled into
 *"You hold 1 coupon — the 9.9 Milo cocoa shaved ice expires 2026-10-12, **only 1 day left**."*
+The weather brief pulls live Haikou data (sample run: sunny, 28.7°C).
 
 ---
 

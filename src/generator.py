@@ -118,10 +118,12 @@ def extract_fields(text: str, rules: dict) -> dict:
 
 
 def compute_fields(data: dict, rules: dict) -> None:
-    """派生字段：从已有字段算出新值（如到期天数）。"""
+    """派生字段：从已有字段算出新值（如到期天数、查表翻译）。"""
     for key, rule in (rules or {}).items():
         op = rule.get("op")
-        src = str(data.get(rule.get("from", ""), "") or "")
+        # 注意：不能用 `x or ""`——0 / False 是合法值，会被误判为空
+        raw = data.get(rule.get("from", ""))
+        src = "" if raw is None else str(raw)
         dates = re.findall(r"\d{4}-\d{2}-\d{2}", src)
         if op == "last_date":
             data[key] = dates[-1] if dates else None
@@ -134,6 +136,11 @@ def compute_fields(data: dict, rules: dict) -> None:
                     data[key] = None
             else:
                 data[key] = None
+
+        elif op == "map":
+            # 查表翻译：如 weather_code 0 -> 晴
+            table = rule.get("table", {}) or {}
+            data[key] = table.get(src, rule.get("default", src))
 
 
 def fetch_all(spec: dict, live: bool) -> tuple[dict, list]:

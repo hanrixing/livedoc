@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "海口 · 每日天气播报",
+    "avatar": "@你的分身名",
+    "sensitive": false,
+    "privacy": "数据源为公开天气 API（open-meteo），可直接分享",
+    "source": "https://open-meteo.com/"
+  },
+
+  "labels": {
+    "temp_now": "当前气温",
+    "temp_max": "今日最高",
+    "temp_min": "今日最低",
+    "humidity": "湿度",
+    "wind": "风速",
+    "rain_prob": "降雨概率",
+    "weather_desc": "天气"
+  },
+
+  "data_sources": [
+    {
+      "id": "weather",
+      "type": "http",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=20.03&longitude=110.32&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia/Shanghai",
+      "fields": {
+        "temp_now": "current.temperature_2m",
+        "humidity": "current.relative_humidity_2m",
+        "weather_code": "current.weather_code",
+        "wind": "current.wind_speed_10m",
+        "temp_max": "daily.temperature_2m_max.0",
+        "temp_min": "daily.temperature_2m_min.0",
+        "rain_prob": "daily.precipitation_probability_max.0"
+      },
+      "fallback": {
+        "temp_now": 27,
+        "humidity": 75,
+        "weather_code": 0,
+        "wind": 11,
+        "temp_max": 30,
+        "temp_min": 24,
+        "rain_prob": 20
+      }
+    }
+  ],
+
+  "compute": {
+    "weather_desc": {
+      "op": "map",
+      "from": "weather_code",
+      "default": "多云",
+      "table": {
+        "0": "晴",
+        "1": "大部晴朗",
+        "2": "局部多云",
+        "3": "阴",
+        "45": "有雾",
+        "48": "有冻雾",
+        "51": "有毛毛雨",
+        "53": "有毛毛雨",
+        "55": "毛毛雨较密",
+        "61": "有小雨",
+        "63": "有中雨",
+        "65": "有大雨",
+        "66": "有冻雨",
+        "67": "冻雨较强",
+        "71": "有小雪",
+        "73": "有中雪",
+        "75": "有大雪",
+        "80": "有阵雨",
+        "81": "阵雨较密",
+        "82": "有强阵雨",
+        "95": "有雷阵雨",
+        "96": "雷阵雨伴冰雹",
+        "99": "强雷阵雨伴冰雹"
+      }
+    }
+  },
+
+  "script": [
+    {
+      "shot": "开场 · 今日天气",
+      "speak": "早上好，我是你的天气播报员。海口今天{weather_desc}，当前气温 {temp_now} 度。",
+      "camera": "中景平视，数字分身站在窗边自然说话，窗外城市光斑虚化，镜头缓慢推近",
+      "visual": "分身身后浮现半透明天气卡片，暖色晨光，玻璃质感界面元素"
+    },
+    {
+      "shot": "温度与湿度",
+      "speak": "今天最高 {temp_max} 度，最低 {temp_min} 度，湿度 {humidity}%。",
+      "camera": "近景，镜头横移掠过悬浮的数字卡片，卡片轻微上下浮动",
+      "visual": "三块玻璃质感数字卡片并列排开，暖橙色高亮数字，背景虚化晨光"
+    },
+    {
+      "shot": "降雨提醒",
+      "speak": "降雨概率 {rain_prob}%，有备无患。",
+      "camera": "特写急推，分身抬手做提醒手势，画面轻微震动",
+      "visual": "半透明雨云图案在分身身后缓缓飘过，冷蓝辅光与暖橙主光形成对比"
+    },
+    {
+      "shot": "收尾 · 数据来源",
+      "speak": "以上数据来自 open-meteo 实时接口——数据变了，播报自己更新。我是你的天气播报员，明天见。",
+      "camera": "中景，分身微笑挥手，镜头缓慢拉远，收尾定格",
+      "visual": "界面数据流光从左向右掠过，暖色光晕收束，定格半秒"
+    }
+  ]
+}

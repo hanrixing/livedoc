@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>海口 · 每日天气播报 · LiveDoc 预览</title>
+<style>
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         margin:0; background:#0c1118; color:#e8edf2; padding:32px; }
+  h1 { font-size:22px; font-weight:600; margin:0 0 4px; }
+  .sub { color:#7e8a99; font-size:13px; margin-bottom:20px; }
+  .warn { background:#3a2418; border:1px solid #7a4a2a; color:#ffb27a;
+           padding:10px 14px; border-radius:10px; font-size:13px; margin-bottom:20px; }
+  .cards { display:flex; flex-wrap:wrap; gap:14px; margin-bottom:24px; }
+  .card { background:#161d27; border:1px solid #25303d; border-radius:14px;
+          padding:18px 26px; min-width:110px; }
+  .num { font-size:30px; font-weight:600; color:#46d3a0; font-variant-numeric:tabular-nums;
+          word-break:break-all; }
+  .label { font-size:12px; color:#7e8a99; margin-top:6px; }
+  .doc { background:#121922; border:1px solid #25303d; border-radius:14px;
+          padding:20px 26px; margin-bottom:18px; }
+  .doc h2 { font-size:15px; color:#9fb0c0; margin:0 0 12px; font-weight:600; }
+  ol { margin:0; padding-left:18px; }
+  li { margin-bottom:16px; line-height:1.6; }
+  .speak { color:#e8edf2; margin:4px 0; }
+  .meta { color:#7e8a99; font-size:12px; margin:2px 0; }
+  .src { color:#7e8a99; font-size:12px; line-height:1.8; }
+  .live { color:#46d3a0; font-size:12px; margin-top:14px; }
+</style></head>
+<body>
+<h1>海口 · 每日天气播报</h1>
+<div class="sub">LiveDoc 活文档 · 数字分身：@你的分身名 · 生成于 2026-10-13 10:04:27</div>
+
+<div class="cards"><div class="card"><div class="num">28.7</div><div class="label">当前气温</div></div>
+<div class="card"><div class="num">73</div><div class="label">湿度</div></div>
+<div class="card"><div class="num">0</div><div class="label">weather_code</div></div>
+<div class="card"><div class="num">12.3</div><div class="label">风速</div></div>
+<div class="card"><div class="num">30</div><div class="label">今日最高</div></div>
+<div class="card"><div class="num">24</div><div class="label">今日最低</div></div>
+<div class="card"><div class="num">20</div><div class="label">降雨概率</div></div>
+<div class="card"><div class="num">晴</div><div class="label">天气</div></div></div>
+<div class="doc"><h2>数字分身讲稿（4 镜）</h2>
+<ol><li><b>第1镜 · 开场 · 今日天气</b><p class="speak">早上好，我是你的天气播报员。海口今天晴，当前气温 28.7 度。</p><p class="meta">镜头：中景平视，数字分身站在窗边自然说话，窗外城市光斑虚化，镜头缓慢推近<br>视觉：分身身后浮现半透明天气卡片，暖色晨光，玻璃质感界面元素</p></li>
+<li><b>第2镜 · 温度与湿度</b><p class="speak">今天最高 30 度，最低 24 度，湿度 73%。</p><p class="meta">镜头：近景，镜头横移掠过悬浮的数字卡片，卡片轻微上下浮动<br>视觉：三块玻璃质感数字卡片并列排开，暖橙色高亮数字，背景虚化晨光</p></li>
+<li><b>第3镜 · 降雨提醒</b><p class="speak">降雨概率 20%，有备无患。</p><p class="meta">镜头：特写急推，分身抬手做提醒手势，画面轻微震动<br>视觉：半透明雨云图案在分身身后缓缓飘过，冷蓝辅光与暖橙主光形成对比</p></li>
+<li><b>第4镜 · 收尾 · 数据来源</b><p class="speak">以上数据来自 open-meteo 实时接口——数据变了，播报自己更新。我是你的天气播报员，明天见。</p><p class="meta">镜头：中景，分身微笑挥手，镜头缓慢拉远，收尾定格<br>视觉：界面数据流光从左向右掠过，暖色光晕收束，定格半秒</p></li></ol>
+<div class="live">数据变了？重跑 <code>generator.py</code>，卡片与讲稿同步刷新——这就是「活文档」。</div>
+</div>
+<div class="doc"><h2>数据来源</h2>
+<ul class="src"><li>http 实时 · https://api.open-meteo.com/v1/forecast?latitude=20.03&amp;longitude=110.32&amp;current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&amp;daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&amp;timezone=Asia/Shanghai</li></ul>
+</div>
+</body></html>

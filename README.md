@@ -75,14 +75,15 @@ python src/generator.py spec/mcd-weekly.livedoc --live   # 指定规格
 
 Token 读取优先级：环境变量 `MCD_MCP_TOKEN` → `~/.workbuddy/mcp.json`。**Token 永不进入产物文件。**
 
-## 两个内置示例
+## 三个内置示例
 
 | 规格 | 数据源 | 演示点 |
 |---|---|---|
 | `spec/quarterly-report.livedoc` | GitHub API（公开） | 仓库 Star/Fork/Issue 实时入稿，公开数据可直接分享 |
 | `spec/mcd-weekly.livedoc` | **麦当劳官方 MCP**（`query-my-coupons` / `available-coupons` / `campaign-calendar`） | 真实券数据 + **自动算到期天数**，体现敏感数据隔离 |
+| `spec/daily-weather.livedoc` | open-meteo 天气 API（公开，免 key） | 温度/湿度/降雨概率实时入稿，天气代码经**声明式映射表**自动翻译成中文——证明不只能接 MCP |
 
-已实测：三个 MCP 工具全部返回真实数据，讲稿自动填充为「你卡包有 1 张券，9.9 美禄可可雪冰 10-12 到期，只剩 1 天」。
+已实测：三个 MCP 工具全部返回真实数据，讲稿自动填充为「你卡包有 1 张券，9.9 美禄可可雪冰 10-12 到期，只剩 1 天」；天气播报实时拉海口数据（示例运行：晴，28.7°C）。
 
 ## 规格格式速览
 

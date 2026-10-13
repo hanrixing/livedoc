@@ -2,6 +2,19 @@
 
 本项目遵循语义化版本。格式参考 [Keep a Changelog](https://keepachangelog.com/)。
 
+## [v0.3.0] - 2026-10-13
+
+### Added
+- `compute` 新增 **`map` 查表计算**：声明式映射表（如天气代码 `0` → "晴"），带 `default` 兜底
+- 第三个示例 `spec/daily-weather.livedoc`：「海口每日天气播报」（open-meteo 公开 API，免 key）——证明不只能接 MCP
+- **12 秒数字分身演示视频**上线（即梦一镜直出，`docs/video/mcd-weekly-demo.mp4`）+ 封面图；README 与在线演示页接入
+- 数据卡片支持**中文标签映射**（`labels` 字段）
+- GitHub Pages 在线演示（`docs/`）+ README 效果截图 +「数据变化前后」双帧动图
+- GitHub Actions 冒烟测试（demo 模式双 spec + 断言无占位符残留）
+
+### Fixed
+- `compute` 取源值时的 falsy 陷阱：`0` / `False` 被 `or ""` 误判为空值，导致 `map` 等派生计算错误命中 `default`（曾致天气代码 `0` 映射成"多云"而非"晴"）
+
 ## [v0.2.0] - 2026-10-12
 
 ### Added
